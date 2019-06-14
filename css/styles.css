@@ -1,0 +1,257 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1140px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-wrapper i {
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+.banner {
+  background-color: #31323d;
+  background-image: url(../images/skulls.png);
+  background-blend-mode: multiply;
+  background-repeat: repeat;
+  -webkit-filter: brightness(1.6) contrast(1.5);
+          filter: brightness(1.6) contrast(1.5);
+}
+
+.banner img {
+  width: 65%;
+  padding: 3em 0;
+}
+
+.banner h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 1em 0;
+  margin: 0;
+  font-size: 5em;
+}
+
+.nav {
+  background: #3a3b49;
+}
+
+.nav a {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  margin-right: 2em;
+}
+
+.nav a:hover {
+  color: #4ad7b1;
+}
+
+.nav .spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.nav .search {
+  margin-right: 0;
+  border-right: 1px solid #4ad7b1;
+  padding-right: .7em;
+  color: #ffffff;
+}
+
+.nav .search:hover {
+  color: #ffffff;
+}
+
+.nav input[type="search"] {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-style: italic;
+  font-size: 1.25em;
+  font-weight: 400;
+  padding: 1em;
+  width: 8em;
+}
+
+.feature {
+  height: 500px;
+  background: url(../images/feature_img.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+  color: #ffffff;
+}
+
+.feature h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.feature h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.shop-items h1 {
+  text-align: center;
+  margin: 0;
+  padding-top: 1.2em;
+  font-size: 3em;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+}
+
+.shop-items .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  grid-gap: 1em;
+  place-content: center;
+  max-width: 1200px;
+  padding: 2em 4em;
+  margin: 0 auto;
+}
+
+.shop-items .grid-container figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+  transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.4s;
+}
+
+.shop-items .grid-container figure img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.shop-items .grid-container figure figcaption {
+  background: rgba(74, 215, 177, 0.85);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+  transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.4s;
+}
+
+.shop-items .grid-container figure figcaption h2 {
+  color: #ffffff;
+  font-size: 1.5em;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.shop-items .grid-container figure figcaption p {
+  margin: 0 0 12px;
+}
+
+.shop-items .grid-container figure figcaption button {
+  border: 2px solid #ffffff;
+  background: transparent;
+  padding: .6em;
+  border-radius: .5em;
+}
+
+.shop-items .grid-container figure figcaption button a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: .9em;
+}
+
+.shop-items .grid-container figure figcaption .price {
+  font-weight: 700;
+  color: #31323d;
+}
+
+.shop-items .grid-container figure:hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
+  transition: opacity 0.1s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
+}
+
+footer {
+  background-color: #31323d;
+  background-image: url(../images/skulls.png);
+  background-blend-mode: multiply;
+  background-repeat: repeat;
+  -webkit-filter: brightness(1.6) contrast(1.5);
+          filter: brightness(1.6) contrast(1.5);
+  padding: 50px;
+}
+/*# sourceMappingURL=styles.css.map */
