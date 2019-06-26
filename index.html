@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:700|Permanent+Marker|Roboto&display=swap"
+      href="https://fonts.googleapis.com/css?family=Lato:700|Permanent+Marker|Roboto:400,700,900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -26,15 +26,25 @@
             <i class="fab fa-twitter-square fa-lg"></i>
             <i class="fab fa-instagram fa-lg"></i>
           </div>
-          <div class="page-links">
-            <a href="#">New</a>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">Brands</a>
-          </div>
+          <ul class="page-links">
+            <li>
+              <a href="#">New</a>
+            </li>
+            <li>
+              <a href="#">Men</a>
+            </li>
+            <li>
+              <a href="#">Women</a>
+            </li>
+            <li>
+              <a href="#">Brands</a>
+            </li>
+          </ul>
           <div class="user-area">
+            <a href="#">Sign In</a>
+            <a href="#">Cart</a>
             <i class="fas fa-search fa-lg search"></i>
-            <input type="search" placeholder="Search..." />
+            <!-- <input type="search" placeholder="Search..." /> -->
           </div>
         </div>
       </div>
@@ -57,16 +67,18 @@
         <figure>
           <img src="images/AF1_01.jpg" alt="" />
           <figcaption class="item-info">
-            <h2>Nike</h2>
-            <p>Air Force 1 Low Retro</p>
-            <p class="price">$100</p>
-            <div>
-              <button>
-                <a href="#">View Details</a>
-              </button>
-              <button>
-                <a href="#">Add to Cart</a>
-              </button>
+            <div class="info-wrapper">
+              <h2>Nike</h2>
+              <p>Air Force 1 Low Retro</p>
+              <p class="price">$100</p>
+              <div>
+                <button>
+                  <a href="#">View Details</a>
+                </button>
+                <button>
+                  <a href="#">Add to Cart</a>
+                </button>
+              </div>
             </div>
           </figcaption>
         </figure>
@@ -189,6 +201,41 @@
         </figure>
       </div>
     </section>
+    <section class="shop-brands">
+      <div class="brands-wrapper">
+        <div class="feature-brand">
+          <a href="#">
+            <img src="images/Nike_AF1.png" alt="Nike Shoe" />
+          </a>
+          <p>
+            <a href="#">
+              <strong>Nike</strong>
+            </a>
+          </p>
+        </div>
+        <div class="feature-brand">
+          <a href="#">
+            <img src="images/Adidas_Superstar.png" alt="Nike Shoe" />
+          </a>
+          <p>
+            <a href="#">
+              <strong>Adidas</strong>
+            </a>
+          </p>
+        </div>
+        <div class="feature-brand">
+          <a href="#">
+            <img src="images/Converse_AllStar.png" alt="Nike Shoe" />
+          </a>
+          <p>
+            <a href="#">
+              <strong>Converse</strong>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="shop-highlights"></section>
     <footer></footer>
   </body>
 </html>
