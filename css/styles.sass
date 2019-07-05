@@ -14,6 +14,9 @@ html, body
   padding: 0
   font-family: 'Roboto', sans-serif
 
+h1
+  color: $main  
+
 section
   padding: 80px 0
 
@@ -125,6 +128,7 @@ section
     font-size: 2.5em
     font-family: $headline
     font-weight: 900
+    color: $white
     margin: 0
     padding: 0
     margin-bottom: 10px
@@ -144,7 +148,7 @@ section
     border: none
     &:hover
       background: $main
-      color: $white
+      color: $white      
 
 .shop-items
   h1
@@ -197,13 +201,21 @@ section
 
 .shop-brands
   background: #f7f7f7
-  display: flex
-  justify-content: center
+  // display: flex
+  // justify-content: center
   width: 100%
   margin: 0 auto
-  
+  padding: 60px
+  h1
+    text-align: center
+    margin: 0 0 60px
+    font-size: 3em
+    font-family: $headline
+    font-weight: 900
+    text-transform: uppercase
 .brands-wrapper
   display: flex
+  margin: 0 auto
   max-width: 1400px
 
 .feature-brand
@@ -242,11 +254,28 @@ section
 .highlights__column
   display: flex
   flex-direction: column
+  a
+    color: $main
+    text-decoration: none
+    text-align: center
+    font-size: 1.2em
+    span
+      display: inline-block
+      margin: 0 auto 20px
+      border-bottom: 1px solid $main
+      
+    .highlights-img
+      overflow: hidden
+      margin: 20px
+    
+      img
+        width: 100%
+        transform: scale(1.03)
+        transition: transform .15s ease-in-out   
+        &:hover
+          transform: scale(1)       
 
-  img 
-    width: 100%
-    padding: 20px
-
+ 
 .support
   background: #f7f7f7
   padding: 35px 0
@@ -315,15 +344,23 @@ footer
       background: $main
 
 .footer-links
-  display: flex
-  padding: 0
-  height: 300px
+  padding: 35px 0
   background: $secondary 
+
+.links-wrapper
+  display: flex
+  max-width: 1200px
+  margin: 0 auto  
 
 .links-container
   display: flex
   flex-direction: column
-  width: 25% 
+  color: $white
+  width: 25%
+  a
+    text-decoration: none
+    color: $white
+    margin-bottom: 10px 
 
 
     
