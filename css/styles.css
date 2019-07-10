@@ -54,8 +54,15 @@ section {
 }
 
 .nav-wrapper .social-links i {
-  color: #F9F9E7;
+  color: #edf2f4;
   padding: 0 10px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.nav-wrapper .social-links i:hover {
+  cursor: pointer;
+  color: #ef233c;
 }
 
 .nav-wrapper .user-area {
@@ -67,13 +74,25 @@ section {
   font-family: 'Lato', sans-serif;
   font-size: 1em;
   text-decoration: none;
-  color: #F9F9E7;
+  color: #edf2f4;
   font-weight: 700;
   margin-right: 2em;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .nav-wrapper .user-area a:hover {
-  color: #FA6A51;
+  color: #ef233c;
+}
+
+.nav-wrapper .user-area i {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.nav-wrapper .user-area i:hover {
+  cursor: pointer;
+  color: #ef233c;
 }
 
 .banner {
@@ -94,7 +113,7 @@ section {
 
 .banner h1 {
   font-family: 'Permanent Marker', cursive;
-  color: #F9F9E7;
+  color: #edf2f4;
   text-transform: uppercase;
   padding: 1em 0;
   margin: 0;
@@ -112,13 +131,13 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 0 auto;
+  max-width: 500px;
 }
 
 .nav .page-links li {
@@ -130,13 +149,14 @@ section {
   text-transform: uppercase;
   font-size: 1.25em;
   text-decoration: none;
-  color: #F9F9E7;
+  color: #edf2f4;
   font-weight: 700;
-  margin-right: 2em;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .nav .page-links li a:hover {
-  color: #FA6A51;
+  color: #ef233c;
 }
 
 .nav .spacer {
@@ -148,70 +168,13 @@ section {
 .nav .search {
   margin-right: 0;
   padding-right: .7em;
-  color: #F9F9E7;
-}
-
-.nav .search:hover {
-  color: #F9F9E7;
-}
-
-.nav input[type="search"] {
-  background: transparent;
-  outline: none;
-  border: none;
-  color: #F9F9E7;
-  font-style: italic;
-  font-size: 1.25em;
-  font-weight: 400;
-  padding: 1em .5em;
-  width: 8em;
-}
-
-.feature {
-  height: 500px;
-  background: url(../images/feature_img2.png);
-  background-size: cover;
-  background-position: center;
-  padding: 100px;
-  color: #F9F9E7;
-}
-
-.feature h1 {
-  font-size: 2.5em;
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  color: #F9F9E7;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
-}
-
-.feature h2 {
-  font-size: 2em;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-}
-
-.feature button {
-  background: #F9F9E7;
-  cursor: pointer;
-  padding: 10px 40px;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: none;
-}
-
-.feature button:hover {
-  background: #2A3050;
-  color: #F9F9E7;
+  color: #edf2f4;
 }
 
 .shop-items h1 {
   text-align: center;
   margin: 0;
-  font-size: 3em;
+  font-size: 2.7em;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -295,7 +258,7 @@ section {
 .shop-brands h1 {
   text-align: center;
   margin: 0 0 60px;
-  font-size: 3em;
+  font-size: 2.7em;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -320,7 +283,7 @@ section {
 .feature-brand a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #F9F9E7;
+  color: #edf2f4;
   font-size: 1.5em;
 }
 
@@ -378,10 +341,22 @@ section {
 .highlights__column a span {
   display: inline-block;
   margin: 0 auto 20px;
+  padding-bottom: 6px;
   border-bottom: 1px solid #2A3050;
 }
 
+.highlights__column a span:hover {
+  color: #ef233c;
+  border-bottom: 1px solid #ef233c;
+}
+
 .highlights__column a .highlights-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
   margin: 20px;
 }
@@ -399,6 +374,123 @@ section {
 .highlights__column a .highlights-img img:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.find-your-pair {
+  background: #f7f7f7;
+}
+
+.shoe-type-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shoes-type {
+  width: 33.3%;
+  margin: 0 2%;
+}
+
+.product-wrapper {
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  padding: 0 0 40px;
+}
+
+.product-wrapper:hover h3 {
+  color: #ef233c;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.image {
+  padding: 5px;
+  display: inline-block;
+  max-width: 200px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.description {
+  cursor: pointer;
+  text-align: center;
+}
+
+.description h3 {
+  color: #2A3050;
+  text-transform: uppercase;
+  margin: 20px 0 10px;
+  border-bottom: 1px solid #2A3050;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+
+.hero-promo {
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+
+.hero-promo a {
+  text-decoration: none;
+}
+
+.promo-banner-wrap {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.promo-banner-wrap img {
+  width: 100%;
+}
+
+.content-inner {
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  top: 30%;
+  z-index: 4;
+  text-align: right;
+}
+
+.content-inner__wrapper {
+  padding: 5em;
+}
+
+.promo-text h1 {
+  font-size: 3em;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #edf2f4;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.promo-btn button {
+  background: #edf2f4;
+  cursor: pointer;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.promo-btn button:hover {
+  background: #2A3050;
+  color: #edf2f4;
 }
 
 .support {
@@ -475,7 +567,7 @@ footer {
 
 .signup-wrapper h2 {
   font-size: 2em;
-  color: #F9F9E7;
+  color: #edf2f4;
   margin-top: 0;
   font-family: "Lato", sans-serif;
   font-weight: 900;
@@ -489,7 +581,7 @@ footer {
 
 .signup-wrapper .subscribe-btn {
   height: 44px;
-  color: #F9F9E7;
+  color: #edf2f4;
   font-weight: bold;
   background: #384061;
   border: none;
@@ -523,13 +615,26 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #F9F9E7;
+  color: #edf2f4;
   width: 25%;
 }
 
-.links-container a {
-  text-decoration: none;
-  color: #F9F9E7;
+.links-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-container ul li {
   margin-bottom: 10px;
+}
+
+.links-container ul li a {
+  text-decoration: none;
+  color: #edf2f4;
+  margin-bottom: 10px;
+}
+
+.links-container ul li a:hover {
+  color: #ef233c;
 }
 /*# sourceMappingURL=styles.css.map */

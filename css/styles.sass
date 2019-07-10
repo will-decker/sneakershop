@@ -1,7 +1,7 @@
 $main: #2A3050
 $secondary: #384061
-$highlight: #FA6A51
-$white: #F9F9E7
+$highlight: #ef233c
+$white: #edf2f4
 $headline: 'Lato', sans-serif
 
 *
@@ -38,6 +38,10 @@ section
     i
       color: $white
       padding: 0 10px
+      transition: all .3s ease-in-out
+      &:hover
+        cursor: pointer
+        color: $highlight 
  
 
   .user-area
@@ -50,8 +54,14 @@ section
       color: $white
       font-weight: 700
       margin-right: 2em
+      transition: all .3s ease-in-out
       &:hover
         color: $highlight
+    i
+      transition: all .3s ease-in-out
+      &:hover
+        cursor: pointer
+        color: $highlight    
 
 
 .banner
@@ -80,9 +90,10 @@ section
     margin: 0
     padding: 0
     display: flex
-    justify-content: center
+    justify-content: space-around
     flex-grow: 1
     margin: 0 auto
+    max-width: 500px
     li
       list-style: none
       a
@@ -92,7 +103,8 @@ section
         text-decoration: none
         color: $white
         font-weight: 700
-        margin-right: 2em
+        transition: all .3s ease-in-out
+        // margin-right: 2em
         &:hover
           color: $highlight
 
@@ -103,58 +115,12 @@ section
     // border-right: 1px solid $highlight
     padding-right: .7em
     color: $white
-    &:hover
-      color: $white
-  input[type="search"]
-    background: transparent
-    outline: none
-    border: none
-    color: $white
-    font-style: italic
-    font-size: 1.25em
-    font-weight: 400
-    padding: 1em .5em
-    width: 8em
-
-
-.feature
-  height: 500px
-  background: url(../images/feature_img2.png)
-  background-size: cover
-  background-position: center
-  padding: 100px
-  color: $white
-  h1
-    font-size: 2.5em
-    font-family: $headline
-    font-weight: 900
-    color: $white
-    margin: 0
-    padding: 0
-    margin-bottom: 10px
-  h2
-    font-size: 2em
-    font-family: $headline
-    font-weight: 700
-    margin: 0
-    padding: 0
-
-  button
-    background: $white
-    cursor: pointer
-    padding: 10px 40px
-    text-transform: uppercase
-    font-weight: bold
-    border: none
-    &:hover
-      background: $main
-      color: $white      
 
 .shop-items
   h1
     text-align: center
     margin: 0
-    font-size: 3em
+    font-size: 2.7em
     font-family: $headline
     font-weight: 900
     text-transform: uppercase
@@ -209,7 +175,7 @@ section
   h1
     text-align: center
     margin: 0 0 60px
-    font-size: 3em
+    font-size: 2.7em
     font-family: $headline
     font-weight: 900
     text-transform: uppercase
@@ -262,18 +228,116 @@ section
     span
       display: inline-block
       margin: 0 auto 20px
+      padding-bottom: 6px
       border-bottom: 1px solid $main
+      &:hover
+        color: $highlight
+        border-bottom: 1px solid $highlight
       
     .highlights-img
+      display: flex
+      align-items: center
       overflow: hidden
       margin: 20px
-    
       img
         width: 100%
         transform: scale(1.03)
         transition: transform .15s ease-in-out   
         &:hover
-          transform: scale(1)       
+          transform: scale(1)
+
+.find-your-pair
+  background: #f7f7f7
+
+.shoe-type-wrapper
+  display: flex
+  max-width: 1200px
+  margin: 0 auto
+
+.shoes-type
+  width: 33.3%
+  margin: 0 2%
+
+.product-wrapper
+  cursor: pointer
+  text-align: center
+  background: #fff
+  padding: 0 0 40px
+  &:hover
+    h3
+      color: $highlight
+      border-bottom: 1px solid #FFFFFF
+
+.image
+  padding: 5px
+  display: inline-block
+  max-width: 200px 
+  img
+    max-width: 100%
+    height: auto 
+
+.description
+  cursor: pointer
+  text-align: center
+  h3
+    color: $main
+    text-transform: uppercase
+    margin: 20px 0 10px
+    border-bottom: 1px solid $main
+    display: inline-block
+    cursor: pointer
+    padding-bottom: 6px
+
+.hero-promo
+  overflow: hidden
+  position: relative
+  padding: 0
+  a
+    text-decoration: none
+
+.promo-banner-wrap
+  overflow: hidden
+  position: relative
+  text-align: center
+  z-index: 1
+  img 
+    width: 100%
+
+.content-inner
+  width: 100%
+  transform: translateY(-50%)
+  position: absolute
+  top: 30%
+  z-index: 4
+  text-align: right
+
+.content-inner__wrapper
+  padding: 5em
+
+.promo-text
+  h1
+    font-size: 3em
+    font-family: $headline
+    font-weight: 900
+    text-transform: uppercase
+    color: $white
+    margin: 0
+    padding: 0
+    margin-bottom: 10px
+
+.promo-btn
+  button
+    background: $white
+    cursor: pointer
+    padding: 10px 40px
+    text-transform: uppercase
+    font-weight: bold
+    border: none
+    transition: all .3s ease-in-out
+    &:hover
+      background: $main
+      color: $white      
+
 
  
 .support
@@ -357,10 +421,17 @@ footer
   flex-direction: column
   color: $white
   width: 25%
-  a
-    text-decoration: none
-    color: $white
-    margin-bottom: 10px 
+  ul
+    list-style: none
+    padding: 0
+    li
+      margin-bottom: 10px
+      a
+        text-decoration: none
+        color: $white
+        margin-bottom: 10px
+        &:hover
+          color: $highlight 
 
 
     
