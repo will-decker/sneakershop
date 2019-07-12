@@ -1,8 +1,31 @@
+// GLOBAL VARIABLES
+  
 $main: #2A3050
 $secondary: #384061
 $highlight: #ef233c
 $white: #edf2f4
 $headline: 'Lato', sans-serif
+
+// MEDIA QUERIES VAR
+
+// Phones
+$screen-xs: 480px 
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm: 576px
+
+// Small tablets (portrait view)
+$screen-md: 768px
+
+// Tablets and small desktops
+$screen-lg: 992px
+
+// Large tablets and desktops
+$screen-xl: 1200px 
+
+@import mixins
+
+// GENERAL
 
 *
   box-sizing: border-box
@@ -27,6 +50,8 @@ section
   width: 1140px
   max-width: 90%
   margin: 0 auto
+
+// NAV ELEMENTS
 
 .nav-wrapper
   display: flex
@@ -75,13 +100,8 @@ section
     width: 65%
     padding: 3em 0
     margin: 0 auto
-  h1
-    font-family: 'Permanent Marker', cursive
-    color: $white
-    text-transform: uppercase
-    padding: 1em 0
-    margin: 0
-    font-size: 5em
+    @include md
+      width: 85%
 
 .nav 
   background: $secondary
@@ -116,6 +136,8 @@ section
     padding-right: .7em
     color: $white
 
+// TOP SELLER SECTION
+
 .shop-items
   h1
     text-align: center
@@ -124,6 +146,8 @@ section
     font-family: $headline
     font-weight: 900
     text-transform: uppercase
+    @include xs
+      font-size: 2.2em
   .grid-container
     display: grid
     grid-template-columns: repeat(4, 25%)
@@ -131,7 +155,11 @@ section
     place-content: center
     max-width: 1200px
     padding: 2em 4em
-    margin: 0 auto
+    margin: 0 auto 
+    @include lg
+      grid-template-columns: repeat(2, 50%) 
+    @include md
+      grid-template-columns: 1fr
 
     figure
       margin: 0
@@ -163,7 +191,9 @@ section
     figure:hover
       cursor: pointer
       img
-        box-shadow: 3px 5px 15px -3px rgba(0,0,0,0.38);
+        box-shadow: 3px 5px 15px -3px rgba(0,0,0,0.38)
+
+// FEATURE BRANDS SECTION 
 
 .shop-brands
   background: #f7f7f7
@@ -172,6 +202,8 @@ section
   width: 100%
   margin: 0 auto
   padding: 60px
+  @include xs
+    padding: 60px 10px
   h1
     text-align: center
     margin: 0 0 60px
@@ -179,16 +211,23 @@ section
     font-family: $headline
     font-weight: 900
     text-transform: uppercase
+    @include xs
+      font-size: 2.2em
 .brands-wrapper
   display: flex
   margin: 0 auto
   max-width: 1400px
+  @include md
+    flex-direction: column
 
 .feature-brand
   padding: 0 10px
+  @include md
+    padding: 0 50px 35px
 
   img
     width: 100%
+    transition: all .3s ease-in-out
   a
     text-decoration: none
     text-transform: uppercase
@@ -202,34 +241,47 @@ section
 
   p
     text-align: center
-    transition: all ease-in-out 0.3s
+    transition: all 0.3s ease-in-out
 
   &:hover
     p
      transform: translateY(5px)
+    img
+      box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.38)
+
+// HIGHLIGHTS SECTION 
 
 .shop-highlights
   max-width: 1200px
   margin: 0 auto
+  @include xs
+    padding: 50px 0
 
 .highlights__row
   display: flex
   align-items: center
   justify-content: center
+  @include md
+    flex-direction: column
 
 .highlights__column
   display: flex
   flex-direction: column
+  @include md
+    flex-direction: row
   a
     color: $main
     text-decoration: none
     text-align: center
     font-size: 1.2em
+    @include xs
+      font-size: 1em  
     span
       display: inline-block
       margin: 0 auto 20px
       padding-bottom: 6px
       border-bottom: 1px solid $main
+
       &:hover
         color: $highlight
         border-bottom: 1px solid $highlight
@@ -239,12 +291,16 @@ section
       align-items: center
       overflow: hidden
       margin: 20px
+      @include md
+        margin: 20px 10px
       img
         width: 100%
         transform: scale(1.03)
-        transition: transform .15s ease-in-out   
+        transition: transform .3s ease-in-out   
         &:hover
           transform: scale(1)
+
+// FIND YOUR PAIR SECTION 
 
 .find-your-pair
   background: #f7f7f7
@@ -288,6 +344,8 @@ section
     cursor: pointer
     padding-bottom: 6px
 
+// FULL WIDTH PROMO
+
 .hero-promo
   overflow: hidden
   position: relative
@@ -307,12 +365,21 @@ section
   width: 100%
   transform: translateY(-50%)
   position: absolute
-  top: 30%
+  top: 40%
   z-index: 4
-  text-align: right
+  text-align: left
+  @include md
+    position: static
+    text-align: center
+    transform: none
 
 .content-inner__wrapper
   padding: 5em
+  @include md
+    border-bottom: 1px solid $main
+    padding: 25px 5em
+  @include xs
+    padding: 25px 3em    
 
 .promo-text
   h1
@@ -324,6 +391,16 @@ section
     margin: 0
     padding: 0
     margin-bottom: 10px
+    text-shadow: 3px 2px 3px rgba(12,27,68,0.73)
+    @include md
+      font-size: 2em
+      font-weight: 700
+      color: $main
+      text-shadow: none
+    @include lg
+      font-size: 2.5em
+    @include xs
+      font-size: 1.8em   
 
 .promo-btn
   button
@@ -334,11 +411,14 @@ section
     font-weight: bold
     border: none
     transition: all .3s ease-in-out
+    @include md
+      width: 100%
+      border: 1px solid $main
     &:hover
       background: $main
       color: $white      
 
-
+// SUPPORT SECTION
  
 .support
   background: #f7f7f7
@@ -346,25 +426,39 @@ section
 
 .support__wrapper
   max-width: 1200px
-  display: flex
-  justify-content: center
+  display: grid
+  grid-template-columns: repeat(4, 25%)
+  place-content: center
   margin: 0 auto
+  padding: 0 35px
+  @include lg
+    width: 75%
+    grid-template-columns: repeat(2, 50%)
+    grid-row-gap: 3em;
+  @include md
+    width: 90%
+    padding: 0 
 
 .support__item
   display: flex
   flex-direction: column
   align-items: center
-  width: 25% 
+  text-align: center 
   i
     margin-bottom: 5px   
   strong
     font-size: 1.4em
-    margin-bottom: 5px  
+    margin-bottom: 5px
+    @include xs
+      font-size: 1em  
   p
     margin: 0
-    text-align: center    
+    text-align: center
+    font-size: .8em
+    @include xs
+      display: none    
 
-
+// FOOTER
 
 footer
   background-color: $main
@@ -393,7 +487,10 @@ footer
 
   input
     height: 44px
-    padding: 0 160px 0 20px  
+    padding: 0 160px 0 20px
+    @include md
+      padding: 0 0 0 25px
+      width: 65%   
 
   .subscribe-btn
     height: 44px
@@ -407,24 +504,42 @@ footer
     &:hover
       background: $main
 
+#signup-form
+  display: flex
+  justify-content: center
+  width: 100%      
+
 .footer-links
   padding: 35px 0
   background: $secondary 
 
 .links-wrapper
-  display: flex
+  display: grid
+  grid-template-columns: repeat(4, 25%)
+  place-content: center
   max-width: 1200px
-  margin: 0 auto  
+  margin: 0 auto
+  @include lg
+    width: 75%
+    grid-template-columns: repeat(2, 50%)
+  @include xs
+    width: 90%    
 
 .links-container
   display: flex
   flex-direction: column
+  align-items: center
   color: $white
   padding-left: 50px
-  width: 25%
+  h2
+   @include sm
+      font-size: 1.2em
   ul
     list-style: none
+    margin: 0 50px 0 0
     padding: 0
+    @include sm
+      margin: 0 25px 0 0 
     li
       margin-bottom: 10px
       a
@@ -433,6 +548,9 @@ footer
         margin-bottom: 10px
         &:hover
           color: $highlight
+  @include lg
+    padding-left: 0
+
 
 .footer-logo__wrapper
    display: flex
@@ -440,7 +558,10 @@ footer
    align-items: center
    img
      width: 100%
-     padding: 0 25px 0 0       
+     max-width: 250px
+     padding: 0 25px 0 0
+     @include lg
+       padding: 0     
 
 
     
