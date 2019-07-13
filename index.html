@@ -16,13 +16,27 @@
 
 <body>
   <header>
-    <div class="nav">
+    <nav class="nav">
+      <div class="menu-toggle">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
       <div class="nav-wrapper">
-        <div class="social-links">
-          <i class="fab fa-facebook-square fa-lg"></i>
-          <i class="fab fa-twitter-square fa-lg"></i>
-          <i class="fab fa-instagram fa-lg"></i>
+        <div class="close">
+          <i class="fas fa-times"></i>
         </div>
+        <ul class="social-links">
+          <li>
+            <a href="#"><i class="fab fa-facebook-square fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"></a><i class="fab fa-twitter-square fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"></a><i class="fab fa-instagram fa-lg"></i></a>
+          </li>
+        </ul>
         <ul class="page-links">
           <li>
             <a href="#">New</a>
@@ -37,13 +51,19 @@
             <a href="#">Brands</a>
           </li>
         </ul>
-        <div class="user-area">
-          <a href="#">Sign In</a>
-          <a href="#">Cart</a>
-          <i class="fas fa-search fa-lg search"></i>
-        </div>
+        <ul class="user-area">
+          <li>
+            <a href="#"><i class="fas fa-user fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-search fa-lg search"></i></a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
     <div class="banner">
       <div class="wrapper">
         <img src="images/TSS-logo.png" alt="The Sneaker Shop Logo" />
@@ -374,6 +394,7 @@
       </div>
     </section>
   </footer>
+  <script src="menu-toggle.js"></script>
 </body>
 
 </html>

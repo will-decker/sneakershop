@@ -53,59 +53,32 @@ section
 
 // NAV ELEMENTS
 
-.nav-wrapper
-  display: flex
-  flex-direction: row
-  align-items: center
-  padding: 0 2em
-  .social-links
-    width: 15em
-    i
-      color: $white
-      padding: 0 10px
-      transition: all .3s ease-in-out
-      &:hover
-        cursor: pointer
-        color: $highlight 
- 
-
-  .user-area
-    width: 15em
-    text-align: right
-    a
-      font-family: 'Lato', sans-serif
-      font-size: 1em
-      text-decoration: none
-      color: $white
-      font-weight: 700
-      margin-right: 2em
-      transition: all .3s ease-in-out
-      &:hover
-        color: $highlight
-    i
-      transition: all .3s ease-in-out
-      &:hover
-        cursor: pointer
-        color: $highlight    
-
-
-.banner
-  background-color: $main
-  background-image: url(../images/skulls-white.png)
-  background-blend-mode: multiply
-  background-repeat: repeat
-  background-position-y: 25%
-  filter: brightness(1) contrast(1.1)
-  img
-    width: 65%
-    padding: 3em 0
-    margin: 0 auto
-    @include md
-      width: 85%
-
 .nav 
   background: $secondary
-  padding: 1em
+  padding: 0 1em
+  @include lg
+    position: fixed
+    width: 100%
+    z-index: 9990
+    padding: 1.6em
+  .menu-toggle
+    position: fixed
+    left: 25px
+    top: 16px
+    display: none
+    width: 25px
+    height: 25px
+    cursor: pointer
+    @include lg
+      display: block
+    
+    i
+      display: block
+      width: 100%
+      height: 2px
+      background: $white
+      border-radius: 2px
+      margin-bottom: 6px
   .page-links
     margin: 0
     padding: 0
@@ -114,8 +87,18 @@ section
     flex-grow: 1
     margin: 0 auto
     max-width: 500px
+    @include lg
+      max-width: 100%
+      width: 100%
+      order: 2
+      margin: 0
+      flex-direction: column
+      flex-grow: 0
+      text-align: right
     li
       list-style: none
+      @include lg
+        margin-bottom: 1.5em
       a
         font-family: 'Lato', sans-serif;
         text-transform: uppercase
@@ -125,16 +108,119 @@ section
         font-weight: 700
         transition: all .3s ease-in-out
         // margin-right: 2em
+        @include lg
+          font-size: 2em
         &:hover
           color: $highlight
 
   .spacer
-    flex: 1
-  .search
-    margin-right: 0
-    // border-right: 1px solid $highlight
-    padding-right: .7em
+    flex: 1  
+
+.nav-wrapper
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 0 2em
+  @include lg
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999
+    width: 45%
+    height: 100vh
+    background: $secondary
+    flex-direction: column
+    justify-content: left
+    align-items: left
+    padding: 0 4em
+    box-shadow: 5px 5px 8px -1px rgba(0,0,0,0.38)
+    transform: translateX(-105%)
+    transition: transform .3s ease
+
+  @include md
+    width: 65%  
+    
+  @include xs
+    width: 100%  
+  .social-links
+    display: flex
+    list-style: none
+    width: 15em
+    padding: 0
+    @include lg
+      width: 100%
+      order: 3
+      font-size: 1.9em
+      margin-top: 1em
+      justify-content: right
+    i
+      color: $white
+      padding: 0 10px
+      transition: all .3s ease-in-out
+      @include lg
+        padding: 0 0 0 .9em
+      &:hover
+        cursor: pointer
+        color: $highlight
+
+.slide-in
+  transform: translateX(0)
+
+.close
+  position: fixed
+  right: 22px
+  top: 16px
+  display: none
+  color: $white
+  font-size: 2em
+  width: 25px
+  height: 25px
+  cursor: pointer
+  @include lg
+    display: block              
+
+.user-area
+  display: flex
+  padding: 0
+  width: 15em
+  justify-content: right
+  list-style: none
+  @include lg
+    width: 100%
+    font-size: 1.2em
+    order: 1
+    justify-content: right
+    margin: 5em 0 2em
+  i
+    margin: 0 12px
     color: $white
+    transition: all .3s ease-in-out
+    @include lg
+      margin: 0 0 0 1.1em
+    &:hover
+      cursor: pointer
+      color: $highlight    
+
+
+.banner
+  background-color: $main
+  background-image: url(../images/skulls-white.png)
+  background-blend-mode: multiply
+  background-repeat: repeat
+  background-position-y: 25%
+  filter: brightness(1) contrast(1.1)
+  @include lg
+    padding-top: 50px
+  img
+    width: 65%
+    padding: 3em 0
+    margin: 0 auto
+    @include md
+      width: 85%
+    @include xs
+      width: 95% 
+      padding: 1.6em 0 
+
 
 // TOP SELLER SECTION
 
@@ -304,15 +390,22 @@ section
 
 .find-your-pair
   background: #f7f7f7
+  @include xs
+    padding: 35px 0
 
 .shoe-type-wrapper
   display: flex
   max-width: 1200px
   margin: 0 auto
+  @include xs
+    flex-direction: column
+    align-items: center
 
 .shoes-type
   width: 33.3%
-  margin: 0 2%
+  margin: 10px 2%
+  @include xs
+    width: 90%
 
 .product-wrapper
   cursor: pointer
@@ -324,17 +417,28 @@ section
       color: $highlight
       border-bottom: 1px solid #FFFFFF
 
+  @include xs  
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0 0 20px    
+
 .image
   padding: 5px
   display: inline-block
   max-width: 200px 
   img
     max-width: 100%
-    height: auto 
+    height: auto
+    @include xs 
+      max-width: 75%
+      // margin-left: -70px 
 
 .description
   cursor: pointer
   text-align: center
+  @include xs
+    margin-right: 40px
   h3
     color: $main
     text-transform: uppercase
@@ -343,6 +447,8 @@ section
     display: inline-block
     cursor: pointer
     padding-bottom: 6px
+    @include xs
+      margin-bottom: 0 
 
 // FULL WIDTH PROMO
 
