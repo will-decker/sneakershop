@@ -172,12 +172,6 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
     padding: 0 4em;
     -webkit-box-shadow: 5px 5px 8px -1px rgba(0, 0, 0, 0.38);
             box-shadow: 5px 5px 8px -1px rgba(0, 0, 0, 0.38);
@@ -716,7 +710,6 @@ section {
 
 .image img {
   max-width: 100%;
-  height: auto;
 }
 
 @media (max-width: 480px) {
@@ -943,7 +936,7 @@ footer {
   background-image: url(../images/skulls-white.png);
   background-blend-mode: multiply;
   background-repeat: repeat;
-  background-position-y: center;
+  background-position-y: -45%;
   -webkit-filter: brightness(1) contrast(1.1);
           filter: brightness(1) contrast(1.1);
   padding: 50px 0 0;
