@@ -304,8 +304,7 @@ section {
 
 .banner {
   background-color: #2A3050;
-  background-image: url(../images/skulls-white.png);
-  background-blend-mode: multiply;
+  background-image: url(../images/skulls-blue.png);
   background-repeat: repeat;
   background-position-y: 25%;
   -webkit-filter: brightness(1) contrast(1.1);
@@ -929,10 +928,9 @@ section {
   }
 }
 
-footer {
+#footer__main {
   background-color: #2A3050;
-  background-image: url(../images/skulls-white.png);
-  background-blend-mode: multiply;
+  background-image: url(../images/skulls-blue.png);
   background-repeat: repeat;
   background-position-y: -45%;
   -webkit-filter: brightness(1) contrast(1.1);
