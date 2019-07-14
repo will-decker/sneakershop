@@ -213,9 +213,9 @@ section {
             order: 3;
     font-size: 1.9em;
     margin-top: 1em;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -243,9 +243,9 @@ section {
   display: flex;
   padding: 0;
   width: 15em;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   list-style: none;
 }
 
@@ -256,6 +256,7 @@ section {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    -webkit-box-pack: end;
     margin: 5em 0 2em;
   }
 }
@@ -399,9 +400,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .shop-items .grid-container figure figcaption .info-wrapper {
