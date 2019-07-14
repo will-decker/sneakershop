@@ -162,6 +162,27 @@ section
       &:hover
         cursor: pointer
         color: $highlight
+  .user-area
+    display: flex
+    padding: 0
+    width: 15em
+    justify-content: right
+    list-style: none
+    @include lg
+      width: 100%
+      font-size: 1.2em
+      order: 1
+      // justify-content: right
+      margin: 5em 0 2em
+    i
+      margin: 0 12px
+      color: $white
+      transition: all .3s ease-in-out
+      @include lg
+        margin: 0 0 0 1.1em
+      &:hover
+        cursor: pointer
+        color: $highlight       
 
 .slide-in
   transform: translateX(0)
@@ -177,29 +198,7 @@ section
   height: 25px
   cursor: pointer
   @include lg
-    display: block              
-
-.user-area
-  display: flex
-  padding: 0
-  width: 15em
-  justify-content: right
-  list-style: none
-  @include lg
-    width: 100%
-    font-size: 1.2em
-    order: 1
-    justify-content: right
-    margin: 5em 0 2em
-  i
-    margin: 0 12px
-    color: $white
-    transition: all .3s ease-in-out
-    @include lg
-      margin: 0 0 0 1.1em
-    &:hover
-      cursor: pointer
-      color: $highlight    
+    display: block                 
 
 
 .banner
