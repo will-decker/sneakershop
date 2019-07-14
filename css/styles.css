@@ -304,20 +304,17 @@ section {
 
 .banner {
   background-color: #2A3050;
-  background-image: url(../images/skulls-blue.png);
-  background-repeat: repeat;
-  background-position-y: 25%;
 }
 
 @media (max-width: 992px) {
   .banner {
-    padding-top: 50px;
+    padding-top: 51px;
   }
 }
 
 .banner img {
   width: 65%;
-  padding: 3em 0;
+  padding: 1.5em 0;
   margin: 0 auto;
 }
 
@@ -330,7 +327,7 @@ section {
 @media (max-width: 480px) {
   .banner img {
     width: 95%;
-    padding: 1.6em 0;
+    padding: 1.2em 0;
   }
 }
 
@@ -784,6 +781,12 @@ section {
   padding: 5em;
 }
 
+@media (max-width: 992px) {
+  .content-inner__wrapper {
+    padding: 3.5em;
+  }
+}
+
 @media (max-width: 768px) {
   .content-inner__wrapper {
     border-bottom: 1px solid #2A3050;
@@ -928,9 +931,6 @@ section {
 
 #footer__main {
   background-color: #2A3050;
-  background-image: url(../images/skulls-blue.png);
-  background-repeat: repeat;
-  background-position-y: -45%;
   padding: 50px 0 0;
 }
 
@@ -963,6 +963,7 @@ section {
 .signup-wrapper input {
   height: 44px;
   padding: 0 160px 0 20px;
+  border-radius: 0;
 }
 
 @media (max-width: 768px) {
@@ -981,10 +982,11 @@ section {
   padding: 0 40px;
   text-transform: uppercase;
   cursor: pointer;
+  border-radius: 0;
 }
 
 .signup-wrapper .subscribe-btn:hover {
-  background: #2A3050;
+  background: #ef233c;
 }
 
 #signup-form {

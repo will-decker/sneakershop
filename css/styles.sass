@@ -201,20 +201,22 @@ section
 
 .banner
   background-color: $main
-  background-image: url(../images/skulls-blue.png)
-  background-repeat: repeat
-  background-position-y: 25%
+  // background-image: url(../images/skulls-blue.png)
+  // background-repeat: repeat
+  // background-position-y: 69%
+  // background-size: 525px
   @include lg
-    padding-top: 50px
+    padding-top: 51px
+
   img
     width: 65%
-    padding: 3em 0
+    padding: 1.5em 0
     margin: 0 auto
     @include md
       width: 85%
     @include xs
       width: 95% 
-      padding: 1.6em 0 
+      padding: 1.2em 0 
 
 
 // TOP SELLER SECTION
@@ -473,6 +475,8 @@ section
 
 .content-inner__wrapper
   padding: 5em
+  @include lg
+    padding: 3.5em
   @include md
     border-bottom: 1px solid $main
     padding: 25px 5em
@@ -560,11 +564,12 @@ section
 
 #footer__main
   background-color: $main
-  background-image: url(../images/skulls-blue.png)
-  background-repeat: repeat
-  background-position-y: -45%
+  // background-image: url(../images/skulls-blue.png)
+  // background-repeat: repeat
+  // background-size: 650px
+  // background-position-y: 800%
   padding: 50px 0 0
-
+    
 .newsletter-signup
   padding: 0 0 50px
 
@@ -584,6 +589,7 @@ section
   input
     height: 44px
     padding: 0 160px 0 20px
+    border-radius: 0
     @include md
       padding: 0 0 0 25px
       width: 65%   
@@ -597,8 +603,9 @@ section
     padding: 0 40px
     text-transform: uppercase
     cursor: pointer
+    border-radius: 0
     &:hover
-      background: $main
+      background: $highlight
 
 #signup-form
   display: flex
